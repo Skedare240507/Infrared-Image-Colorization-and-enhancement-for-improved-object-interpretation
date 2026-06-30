@@ -1,0 +1,14 @@
+architecture: pix2pix
+in_channels: 1
+out_channels: 3
+ngf: 64
+ndf: 64
+n_layers: 3
+use_dropout: true
+
+training:
+  lambda_l1: 100.0
+  lr: 0.0002
+  beta1: 0.5
+  epochs: 200
+  save_every: 10

@@ -1,0 +1,43 @@
+# Shared defaults — override per experiment in configs/experiments/
+project:
+  name: ir-colorization
+  seed: 42
+
+data:
+  image_size: [256, 256]
+  num_workers: 4
+  batch_size: 16
+
+model:
+  architecture: pix2pix
+  in_channels: 1
+  out_channels: 3
+  ngf: 64
+  ndf: 64
+  n_layers: 3
+  use_dropout: true
+
+training:
+  epochs: 200
+  learning_rate: 0.0002
+  lr: 0.0002
+  beta1: 0.5
+  lambda_l1: 100.0
+  save_every: 10
+  checkpoint_dir: models/weights
+
+inference:
+  device: auto
+  checkpoint: models/weights/colorization.pt
+  sr_checkpoint: models/weights/super_resolution.pt
+
+api:
+  host: "0.0.0.0"
+  port: 5000
+  max_upload_mb: 50
+  allowed_extensions: [".tif", ".tiff", ".png"]
+  upload_dir: uploads
+  output_dir: outputs
+  log_dir: logs
+  log_level: INFO
+  sr_scale: 2
