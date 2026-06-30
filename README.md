@@ -73,9 +73,3 @@ cd frontend
 npm install
 npm run dev
 ```
-
-## Notes
-
-- The README text has been rewritten to match the hackathon problem more clearly.
-- The project remains the same under the hood; only documentation has changed.
-- Use the frontend to quickly test the IR colorization pipeline.
