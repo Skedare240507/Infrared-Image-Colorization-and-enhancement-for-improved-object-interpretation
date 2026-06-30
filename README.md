@@ -1,4 +1,4 @@
-# Infrared Image Colorization and Enhancement
+# Infrared Image Colorization and Enhancement for improved object interpretation
 
 > Developed by Sahil Kedare
 
